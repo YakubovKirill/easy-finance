@@ -1,0 +1,41 @@
+.container {
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: var(--containerWidthMedium);
+    height: 100%;
+    display: flex;
+    background-color: aqua;
+    padding: 20px;
+}
+
+.header {
+
+}
+
+.menuBar {
+    
+}
+
+@media (min-width: 1600px) { 
+    .wrapper {
+        max-width: var(--containerWidthLarge);
+    }
+}
+
+@media (min-width: 1920px) { 
+    .wrapper {
+        max-width: var(--containerWidthExtraLarge);
+    }
+}

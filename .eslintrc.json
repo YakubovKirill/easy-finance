@@ -1,3 +1,64 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "eslint:recommended", 
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react", "simple-import-sort"],
+  "rules": {
+    "object-curly-spacing": ["error", "always", { "arraysInObjects": true }],
+    "keyword-spacing": "error",
+    "key-spacing": ["error", {
+      "afterColon": true,
+      "align": "value"
+    }],
+    "indent": ["error", 4],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "no-multi-spaces": ["error"],
+    "no-trailing-spaces": ["error", { "ignoreComments": true }],
+    "comma-dangle": ["error", "always-multiline"],
+    "max-len": [
+      "error",
+      {
+        "code": 120
+      }
+    ],
+    "no-multiple-empty-lines": ["error", { "max": 1}],
+    "eol-last": ["error", "always"],
+    "space-infix-ops": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "newline-before-return": "error",
+    "arrow-body-style": ["error", "as-needed"]
+  },
+  "root": true,
+  "overrides": [
+    // override "simple-import-sort" config
+    {
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
+      "rules": {
+        "simple-import-sort/imports": [
+          "error",
+          {
+            "groups": [
+              // Packages `react` related packages come first.
+              ["^react", "^@?\\w"],
+              // Internal packages.
+              ["^(@|components)(/.*|$)"],
+              // Side effect imports.
+              ["^\\u0000"],
+              // Parent imports. Put `..` last.
+              ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+              // Other relative imports. Put same-folder imports and `.` last.
+              ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+              // Style imports.
+              ["^.+\\.?(css)$"]
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }
