@@ -16,7 +16,6 @@
     max-width: var(--containerWidthMedium);
     height: 100%;
     display: flex;
-    background-color: aqua;
     padding: 20px;
 }
 
@@ -26,6 +25,21 @@
 
 .menuBar {
     
+}
+
+.button {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(222, 222, 222);
+}
+
+.button:active {
+    background-color: rgb(182, 182, 182);
 }
 
 @media (min-width: 1600px) { 

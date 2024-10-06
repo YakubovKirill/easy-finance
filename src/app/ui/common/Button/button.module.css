@@ -1,0 +1,19 @@
+.content {
+    display: flex;
+    position: relative;
+}
+
+.button {
+    border: 1px solid var(--mainWhiteBorder);
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--mainBtnHover);
+}
+
+.button:active {
+    background-color: var(--mainBtnActive);
+}

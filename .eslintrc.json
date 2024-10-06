@@ -31,7 +31,8 @@
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "newline-before-return": "error",
-    "arrow-body-style": ["error", "as-needed"]
+    "arrow-body-style": ["error", "as-needed"],
+    "react/display-name": "off"
   },
   "root": true,
   "overrides": [

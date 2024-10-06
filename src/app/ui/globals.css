@@ -12,7 +12,9 @@
     --tinyFont: 200;
     --letterSpace: 0.4px;
 
-    --mainBtn: #5d57c9;
+    --mainBtn: #ededed;
+    --mainBtnHover: rgb(222, 222, 222);
+    --mainBtnActive: rgb(182, 182, 182);
     --secondaryBtn: rgba(112, 112, 112, 0.777);
     --secondaryBtnDisabled: rgba(61, 61, 61, 0.546);
     --text: white;
@@ -41,36 +43,4 @@ body {
 a {
     color: inherit;
     text-decoration: none;
-}
-
-@mixin mediaMobileSmall {
-    @media (min-width: 380px) { @content; }
-}
-
-@mixin mediaMobileMedium {
-    @media (min-width: 520px) { @content; }
-}
-
-@mixin mediaTabletSmall {
-    @media (min-width: 768px) { @content; }
-}
-
-@mixin mediaTabletMedium {
-    @media (min-width: 1024px) { @content; }
-}
-
-@mixin mediaTabletLarge {
-    @media (min-width: 1366px) { @content; }
-}
-
-@mixin mediaPcSmall {
-    @media (min-width: 1600px) { @content; }
-}
-
-@mixin mediaPcMedium {
-    @media (min-width: 1920px) { @content; }
-}
-
-@mixin mediaPcLarge {
-    @media (min-width: 2560px) { @content; }
 }

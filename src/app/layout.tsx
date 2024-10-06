@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
-import { FAKE_USER } from './mocks/fakeUser';
+import { FAKE_USER } from '../data/mocks/fakeUser';
+
 import { PROJECT } from './text/constants';
 import Header from './ui/header/header';
 import { getJoinedString } from './utils/string-utils';
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
     children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
     return (
         <html lang="en">
